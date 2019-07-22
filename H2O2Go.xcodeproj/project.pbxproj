@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8F344BF622D96B56008DB12E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F344BF522D96B56008DB12E /* AppDelegate.swift */; };
-		8F344BF822D96B56008DB12E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F344BF722D96B56008DB12E /* ViewController.swift */; };
 		8F344BFB22D96B56008DB12E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F344BF922D96B56008DB12E /* Main.storyboard */; };
 		8F344BFD22D96B57008DB12E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F344BFC22D96B57008DB12E /* Assets.xcassets */; };
 		8F344C0022D96B57008DB12E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F344BFE22D96B57008DB12E /* LaunchScreen.storyboard */; };
+		8F3798C422E1FFFF0021F7D6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3798C322E1FFFF0021F7D6 /* SignUpViewController.swift */; };
+		8F3798C622E246AD0021F7D6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3798C522E246AD0021F7D6 /* UIViewControllerExtension.swift */; };
+		8F3798D022E61A8E0021F7D6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3798CF22E61A8E0021F7D6 /* UIViewExtension.swift */; };
+		8F3F189F22E0EA3E00617719 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F189E22E0EA3E00617719 /* LogInViewController.swift */; };
+		8F3F18A122E0EBF900617719 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F18A022E0EBF900617719 /* PlaceholderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8F344BF222D96B56008DB12E /* H2O2Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = H2O2Go.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F344BF522D96B56008DB12E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F344BF722D96B56008DB12E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F344BFA22D96B56008DB12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F344BFC22D96B57008DB12E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F344BFF22D96B57008DB12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F344C0122D96B57008DB12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F3798C322E1FFFF0021F7D6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../SignUpViewController.swift; sourceTree = "<group>"; };
+		8F3798C522E246AD0021F7D6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = ../../UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		8F3798CF22E61A8E0021F7D6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		8F3F189E22E0EA3E00617719 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ../LogInViewController.swift; sourceTree = "<group>"; };
+		8F3F18A022E0EBF900617719 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceholderViewController.swift; path = ../PlaceholderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		8F344BF422D96B56008DB12E /* H2O2Go */ = {
 			isa = PBXGroup;
 			children = (
+				8F3798CC22E263270021F7D6 /* model */,
+				8F3798C922E261E90021F7D6 /* ui */,
 				8F344BF522D96B56008DB12E /* AppDelegate.swift */,
-				8F344BF722D96B56008DB12E /* ViewController.swift */,
 				8F344BF922D96B56008DB12E /* Main.storyboard */,
 				8F344BFC22D96B57008DB12E /* Assets.xcassets */,
 				8F344BFE22D96B57008DB12E /* LaunchScreen.storyboard */,
 				8F344C0122D96B57008DB12E /* Info.plist */,
 			);
 			path = H2O2Go;
+			sourceTree = "<group>";
+		};
+		8F3798C922E261E90021F7D6 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				8F3798CB22E262F50021F7D6 /* extension */,
+				8F3798CA22E262DA0021F7D6 /* class */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		8F3798CA22E262DA0021F7D6 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				8F3F189E22E0EA3E00617719 /* LogInViewController.swift */,
+				8F3F18A022E0EBF900617719 /* PlaceholderViewController.swift */,
+				8F3798C322E1FFFF0021F7D6 /* SignUpViewController.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		8F3798CB22E262F50021F7D6 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				8F3798C522E246AD0021F7D6 /* UIViewControllerExtension.swift */,
+				8F3798CF22E61A8E0021F7D6 /* UIViewExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		8F3798CC22E263270021F7D6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F344BF822D96B56008DB12E /* ViewController.swift in Sources */,
+				8F3798D022E61A8E0021F7D6 /* UIViewExtension.swift in Sources */,
+				8F3F18A122E0EBF900617719 /* PlaceholderViewController.swift in Sources */,
+				8F3F189F22E0EA3E00617719 /* LogInViewController.swift in Sources */,
+				8F3798C622E246AD0021F7D6 /* UIViewControllerExtension.swift in Sources */,
+				8F3798C422E1FFFF0021F7D6 /* SignUpViewController.swift in Sources */,
 				8F344BF622D96B56008DB12E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
