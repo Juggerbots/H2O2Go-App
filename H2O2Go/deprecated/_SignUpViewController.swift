@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class _SignUpViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
@@ -25,6 +25,9 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         performOnAllTextFields(_func: { textfield in textfield.setBottomBorder(withColor: UIColor.white.cgColor) })
+        
+        signupButton.layer.cornerRadius = 5
+        loginButton.layer.cornerRadius = 5
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -33,7 +36,7 @@ class SignUpViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Sign Up Segue" {
-            clearAllTextFields()
+            performOnAllTextFields(_func: { textfield in textfield.setBottomBorder(withColor: UIColor.white.cgColor) })
         }
     }
     

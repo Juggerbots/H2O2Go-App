@@ -24,32 +24,32 @@ class LogInViewController: UIViewController {
         
         performOnAllTextFields(_func: { textfield in textfield.setBottomBorder(withColor: UIColor.white.cgColor) })
         
-        loginButton.backgroundColor = UIColor.white
         loginButton.layer.cornerRadius = 5
-        signupButton.backgroundColor = UIColor.white
         signupButton.layer.cornerRadius = 5
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return identifier != "Log In Segue" || validLogIn(username: usernameField.text, password: passwordField.text)
+        if identifier == "idLogInSegue" {
+            CurrentUser.loginUserWith(username: usernameField.text, andPassword: passwordField.text)
+            return CurrentUser.loggedIn
+        }
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != nil && segue.identifier == "Log In Segue" {
-            performOnAllTextFields(_func: { textfield in textfield.text = nil })
+        if segue.identifier != nil && segue.identifier == "idLogInSegue" && CurrentUser.loggedIn {
+            print("partial success")
         }
     }
     
     @IBAction func logInEnter(_ sender: Any) {
-        if validLogIn(username: usernameField.text, password: passwordField.text) {
-            performSegue(withIdentifier: "Log In Segue", sender: nil)
-        } else {
-            passwordField.text = nil
+        CurrentUser.loginUserWith(username: usernameField.text, andPassword: passwordField.text)
+        if CurrentUser.loggedIn {
+            performSegue(withIdentifier: "idLogInSegue", sender: nil)
         }
     }
     
-    func validLogIn(username: String?, password: String?) -> Bool {
-        return username != nil && password != nil && username == globalUsername && password == globalPassword
+    @IBAction func cancelSignUp(_ unwindSegue: UIStoryboardSegue) {
     }
     
 }

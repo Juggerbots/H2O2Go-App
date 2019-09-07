@@ -9,12 +9,6 @@
 import UIKit
 
 extension UIViewController {
-    public func clearAllTextFields() {
-        for subview in self.view.subviews {
-            if let textfield = subview as? UITextField { textfield.text = nil }
-        }
-    }
-    
     public func performOnAllTextFields(_func: (UITextField) -> Void) {
         for subview in self.view.subviews {
             if let textfield = subview as? UITextField { _func(textfield) }

@@ -49,6 +49,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.43353775143623352" green="0.72777217626571655" blue="0.97729116678237915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Z3n-XY-bvd" kind="presentation" identifier="idLogInSegue" id="4Qe-L4-5ti"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYM-hj-DA4">
                                 <rect key="frame" x="166" y="541" width="82" height="40"/>
@@ -61,7 +64,7 @@
                                     <color key="titleColor" red="0.43353775143623352" green="0.72777217626571655" blue="0.97729116678237915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kpu-fd-SM0" kind="show" id="c6H-YD-Nsh"/>
+                                    <segue destination="kpu-fd-SM0" kind="show" identifier="idSignUpSegue" id="c6H-YD-Nsh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +93,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGW-mD-4mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-300" y="-216.29464285714286"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="NoF-tX-zmt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="Z3n-XY-bvd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZ3-ac-xOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-299" y="239"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="avz-MU-AXr">
