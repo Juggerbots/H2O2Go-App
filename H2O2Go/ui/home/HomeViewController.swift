@@ -22,13 +22,6 @@ class HomeViewController: UIViewController {
         updateStats()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        CurrentUser.loadRefills()
-        updateStats()
-    }
-    
     func updateStats() {
         if CurrentUser.nRefills == 0 {
             gallonsLabel.text = "No Gallons"
@@ -44,13 +37,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func logRefill(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source
-        
-        if let refillViewController = sourceViewController as? RefillViewController {
-            let chosenAmount = refillViewController.pickerView(refillViewController.fillFraction, titleForRow: refillViewController.fillFraction.selectedRow(inComponent: 0), forComponent: 0)!
-            CurrentUser.refill(FillAmount(rawValue: chosenAmount)!)
-            updateStats()
-        }
     }
     
     @IBAction func cancelRefill(_ unwindSegue: UIStoryboardSegue) {

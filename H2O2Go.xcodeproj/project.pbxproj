@@ -28,6 +28,8 @@
 		8F3F189F22E0EA3E00617719 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F189E22E0EA3E00617719 /* LogInViewController.swift */; };
 		8F485AAB2321906600EFAB99 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F485AAA2321906600EFAB99 /* HTTPRequest.swift */; };
 		8F485AAD2321911200EFAB99 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F485AAC2321911200EFAB99 /* CurrentUser.swift */; };
+		8F4B05A7250BFA920005C8E6 /* UpSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B05A6250BFA920005C8E6 /* UpSegue.swift */; };
+		8F4B05A9250BFC9D0005C8E6 /* DownSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B05A8250BFC9D0005C8E6 /* DownSegue.swift */; };
 		8F96B5EC231D98C100C832FC /* RefillStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96B5EB231D98C100C832FC /* RefillStation.swift */; };
 		8F96B5EE231D9BDD00C832FC /* AnnotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96B5ED231D9BDD00C832FC /* AnnotationViewController.swift */; };
 		8FBB2AC2231A74120044B94C /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBB2AC1231A74120044B94C /* SignUp.storyboard */; };
@@ -63,6 +65,8 @@
 		8F3F189E22E0EA3E00617719 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ../LogInViewController.swift; sourceTree = "<group>"; };
 		8F485AAA2321906600EFAB99 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		8F485AAC2321911200EFAB99 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		8F4B05A6250BFA920005C8E6 /* UpSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpSegue.swift; sourceTree = "<group>"; };
+		8F4B05A8250BFC9D0005C8E6 /* DownSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownSegue.swift; sourceTree = "<group>"; };
 		8F96B5EB231D98C100C832FC /* RefillStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillStation.swift; sourceTree = "<group>"; };
 		8F96B5ED231D9BDD00C832FC /* AnnotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewController.swift; sourceTree = "<group>"; };
 		8FBB2ABF231961D70044B94C /* Testing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Testing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -180,6 +184,8 @@
 				8F1AE77D231C95EC003DAC8D /* LeftToRightSegueUnwind.swift */,
 				8F1AE77F231CAB33003DAC8D /* RightToLeftSegue.swift */,
 				8F1AE781231CAB6D003DAC8D /* RightToLeftSegueUnwind.swift */,
+				8F4B05A6250BFA920005C8E6 /* UpSegue.swift */,
+				8F4B05A8250BFC9D0005C8E6 /* DownSegue.swift */,
 			);
 			path = segue;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 				8F3F189F22E0EA3E00617719 /* LogInViewController.swift in Sources */,
 				8F1AE77C231C1470003DAC8D /* LeftToRightSegue.swift in Sources */,
 				8FBB2AD0231AABE50044B94C /* AppConstants.swift in Sources */,
+				8F4B05A9250BFC9D0005C8E6 /* DownSegue.swift in Sources */,
 				8F96B5EC231D98C100C832FC /* RefillStation.swift in Sources */,
 				8F3454012308E8AA007A8CCB /* RefillViewController.swift in Sources */,
 				8F3798C622E246AD0021F7D6 /* UIViewControllerExtension.swift in Sources */,
@@ -310,6 +317,7 @@
 				8F96B5EE231D9BDD00C832FC /* AnnotationViewController.swift in Sources */,
 				8F3798C422E1FFFF0021F7D6 /* _SignUpViewController.swift in Sources */,
 				8F485AAD2321911200EFAB99 /* CurrentUser.swift in Sources */,
+				8F4B05A7250BFA920005C8E6 /* UpSegue.swift in Sources */,
 				8F344BF622D96B56008DB12E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -442,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -459,14 +467,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLGQV7GMF3;
 				INFOPLIST_FILE = H2O2Go/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dumbbitchdisease.H2O2Go;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -477,14 +487,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLGQV7GMF3;
 				INFOPLIST_FILE = H2O2Go/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dumbbitchdisease.H2O2Go;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
