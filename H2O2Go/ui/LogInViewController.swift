@@ -16,8 +16,9 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
-    let globalUsername = "testuser"
-    let globalPassword = "testpassword"
+//    Used to sign into locally stored Test User (deprecated)
+//    let globalUsername = "testuser"
+//    let globalPassword = "testpassword"
     
     override func viewDidLoad() {
         super.viewDidLoad()

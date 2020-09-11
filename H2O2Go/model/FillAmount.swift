@@ -27,5 +27,4 @@ enum FillAmount: String {
         }
     }
     
-    
 }

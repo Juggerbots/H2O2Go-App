@@ -6,6 +6,7 @@
 //  Copyright © 2019 LamAn Wyner. All rights reserved.
 //
 
+@available(swift, deprecated: 0.1, message: "Sign into registered account instead")
 class TestUser {
     
     private(set) static var bottleSize: Double = 18

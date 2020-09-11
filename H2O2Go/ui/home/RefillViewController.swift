@@ -33,4 +33,11 @@ class RefillViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return fillFractions[row].rawValue
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != nil && segue.identifier == "idLogRefillSegue" {
+            if let chosenAmount = pickerView(fillFraction, titleForRow: fillFraction.selectedRow(inComponent: 0), forComponent: 0) {
+                CurrentUser.refill(FillAmount(rawValue: chosenAmount)!)
+            }
+        }
+    }
 }
