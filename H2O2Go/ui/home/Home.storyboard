@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oFK-HU-7Eo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m0x-R6-G5d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,25 +7,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="bxt-lJ-rNJ">
             <objects>
                 <viewController id="gyP-fV-654" customClass="ProfileViewController" customModule="H2O2Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ru3-BZ-ud5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmj-Ih-0xj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="354"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OU0-ec-OiS">
-                                        <rect key="frame" x="100" y="70" width="214" height="214"/>
+                                        <rect key="frame" x="100" y="130.5" width="214" height="214"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="OU0-ec-OiS" secondAttribute="height" multiplier="1:1" id="zz5-Am-fvd"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTn-GA-qn1">
-                                        <rect key="frame" x="10" y="304" width="394" height="25"/>
+                                        <rect key="frame" x="10" y="364.5" width="394" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="6Tn-o7-1zk"/>
                                         </constraints>
@@ -34,7 +34,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-c0-08S">
-                                        <rect key="frame" x="10" y="334" width="394" height="25"/>
+                                        <rect key="frame" x="10" y="394.5" width="394" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="xxe-e0-yLQ"/>
                                         </constraints>
@@ -57,7 +57,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaZ-yO-CuB">
-                                <rect key="frame" x="80" y="374" width="254" height="414"/>
+                                <rect key="frame" x="80" y="495" width="254" height="347"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4K-7d-8JM">
                                         <rect key="frame" x="0.0" y="0.0" width="254" height="60"/>
@@ -93,44 +93,21 @@
                                     <constraint firstItem="05R-3D-PgI" firstAttribute="leading" secondItem="jaZ-yO-CuB" secondAttribute="leading" id="qr1-cL-CAi"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m60-IX-IMe">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="bv4-6d-8ti"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Profile" id="QWW-aW-72C">
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="cID-AB-7gi">
-                                            <connections>
-                                                <segue destination="oFK-HU-7Eo" kind="show" customClass="RightToLeftSegue" customModule="H2O2Go" customModuleProvider="target" id="v0f-Xm-xsG"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jaZ-yO-CuB" firstAttribute="leading" secondItem="lOD-6R-fbC" secondAttribute="leading" constant="80" id="2sf-Wx-Wwo"/>
-                            <constraint firstItem="m60-IX-IMe" firstAttribute="top" secondItem="lOD-6R-fbC" secondAttribute="top" id="4GF-HW-x8X"/>
-                            <constraint firstAttribute="trailing" secondItem="m60-IX-IMe" secondAttribute="trailing" id="B2f-Rb-Uye"/>
                             <constraint firstItem="mmj-Ih-0xj" firstAttribute="trailing" secondItem="lOD-6R-fbC" secondAttribute="trailing" id="KA8-en-cwE"/>
                             <constraint firstItem="lOD-6R-fbC" firstAttribute="trailing" secondItem="jaZ-yO-CuB" secondAttribute="trailing" constant="80" id="Tr1-ze-l8k"/>
                             <constraint firstItem="lOD-6R-fbC" firstAttribute="bottom" secondItem="jaZ-yO-CuB" secondAttribute="bottom" constant="20" id="VdL-4u-giz"/>
                             <constraint firstItem="mmj-Ih-0xj" firstAttribute="top" secondItem="ru3-BZ-ud5" secondAttribute="top" id="Vo7-Nc-KHT"/>
                             <constraint firstItem="mmj-Ih-0xj" firstAttribute="leading" secondItem="lOD-6R-fbC" secondAttribute="leading" id="Y4i-sV-fii"/>
                             <constraint firstItem="jaZ-yO-CuB" firstAttribute="top" secondItem="mmj-Ih-0xj" secondAttribute="bottom" constant="20" id="fv9-kC-1a0"/>
-                            <constraint firstItem="mmj-Ih-0xj" firstAttribute="bottom" secondItem="lOD-6R-fbC" secondAttribute="centerY" constant="-50" id="wNx-EJ-ZnI"/>
-                            <constraint firstItem="m60-IX-IMe" firstAttribute="leading" secondItem="ru3-BZ-ud5" secondAttribute="leading" id="xJc-1k-mgb"/>
+                            <constraint firstItem="mmj-Ih-0xj" firstAttribute="bottom" secondItem="lOD-6R-fbC" secondAttribute="centerY" id="wNx-EJ-ZnI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lOD-6R-fbC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tbN-3K-ld9"/>
+                    <navigationItem key="navigationItem" title="Profile" id="tbN-3K-ld9"/>
                     <connections>
                         <outlet property="bottelLabel" destination="ccE-Mj-u9e" id="0xz-1P-Lwm"/>
                         <outlet property="nameLabel" destination="Jie-c0-08S" id="0oH-6P-Cgl"/>
@@ -142,16 +119,32 @@
             </objects>
             <point key="canvasLocation" x="-223.18840579710147" y="1261.6071428571429"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T2D-eO-9cu">
+            <objects>
+                <navigationController id="m0x-R6-G5d" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5uv-tc-fZH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oFK-HU-7Eo" kind="relationship" relationship="rootViewController" id="hrn-Xp-oNP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMm-EO-dec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-420" y="528"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="usM-wD-toa">
             <objects>
                 <viewController id="oFK-HU-7Eo" userLabel="Home View Controller" customClass="HomeViewController" customModule="H2O2Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F1c-yB-9g5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-sI-kYc" userLabel="Stats">
-                                <rect key="frame" x="0.0" y="34" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0M-Ty-mU5" userLabel="Water">
                                         <rect key="frame" x="0.0" y="0.0" width="277.5" height="414"/>
@@ -250,7 +243,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukZ-tj-40f">
-                                <rect key="frame" x="145" y="618" width="124" height="40"/>
+                                <rect key="frame" x="145" y="672" width="124" height="40"/>
                                 <color key="backgroundColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="DAN-9m-VhW"/>
@@ -261,48 +254,21 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ib8-dz-sAr" kind="show" identifier="" customClass="UpSegue" customModule="H2O2Go" customModuleProvider="target" id="Ohg-Kp-hM6"/>
+                                    <segue destination="Ib8-dz-sAr" kind="presentation" id="KiG-Eh-cMw"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsl-Bh-pCl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" red="0.97647327179999999" green="0.97647052999999995" blue="0.97646230460000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkt-fb-yVR">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="V39-mo-1JA"/>
-                                </constraints>
-                                <color key="tintColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Home" id="obN-F0-JrE">
-                                        <barButtonItem key="leftBarButtonItem" title="Profile" id="aQE-O7-hFi">
-                                            <connections>
-                                                <segue destination="gyP-fV-654" kind="show" customClass="LeftToRightSegue" customModule="H2O2Go" customModuleProvider="target" id="TEA-N6-C5m"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Map" id="vKW-H2-FvN">
-                                            <connections>
-                                                <segue destination="XPC-Gr-zRz" kind="show" customClass="RightToLeftSegue" customModule="H2O2Go" customModuleProvider="target" id="h3t-VJ-YgS"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lsl-Bh-pCl" firstAttribute="leading" secondItem="AQ8-8M-Vr6" secondAttribute="leading" id="1h6-6c-5E6"/>
-                            <constraint firstItem="Lkt-fb-yVR" firstAttribute="top" secondItem="lsl-Bh-pCl" secondAttribute="bottom" id="40n-uT-aba"/>
-                            <constraint firstItem="Lkt-fb-yVR" firstAttribute="leading" secondItem="AQ8-8M-Vr6" secondAttribute="leading" id="Clh-cT-bou"/>
                             <constraint firstItem="AQ8-8M-Vr6" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ukZ-tj-40f" secondAttribute="bottom" constant="70" id="KB6-WF-foQ"/>
                             <constraint firstItem="lsl-Bh-pCl" firstAttribute="top" secondItem="F1c-yB-9g5" secondAttribute="top" id="PFV-Cv-OJ2"/>
                             <constraint firstItem="ukZ-tj-40f" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HzS-sI-kYc" secondAttribute="bottom" constant="50" id="Qdg-BS-k9g"/>
                             <constraint firstItem="AQ8-8M-Vr6" firstAttribute="trailing" secondItem="HzS-sI-kYc" secondAttribute="trailing" id="RV3-ph-HkA"/>
-                            <constraint firstItem="Lkt-fb-yVR" firstAttribute="trailing" secondItem="AQ8-8M-Vr6" secondAttribute="trailing" id="a9N-0d-obV"/>
                             <constraint firstItem="AQ8-8M-Vr6" firstAttribute="bottom" secondItem="ukZ-tj-40f" secondAttribute="bottom" priority="500" constant="150" id="eiR-hb-H4u"/>
                             <constraint firstItem="lsl-Bh-pCl" firstAttribute="trailing" secondItem="AQ8-8M-Vr6" secondAttribute="trailing" id="hhP-dF-XNx"/>
                             <constraint firstItem="HzS-sI-kYc" firstAttribute="leading" secondItem="AQ8-8M-Vr6" secondAttribute="leading" id="kAa-b5-9Pp"/>
@@ -313,8 +279,15 @@
                         <viewLayoutGuide key="safeArea" id="AQ8-8M-Vr6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" leftItemsSupplementBackButton="YES" id="jcg-Tr-NEJ">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="5cN-7b-vFH"/>
-                        <barButtonItem key="rightBarButtonItem" title="Map" id="dox-yl-KRa"/>
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="5cN-7b-vFH">
+                            <color key="tintColor" red="0.3349270225" green="0.73115271329999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="gyP-fV-654" kind="show" id="Bhk-By-wlT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="dox-yl-KRa">
+                            <color key="tintColor" red="0.3349270225" green="0.73115271329999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bottlesLabel" destination="Al2-yv-HRB" id="OHa-O1-Guz"/>
@@ -365,7 +338,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oFK-HU-7Eo" kind="show" identifier="idLogRefillSegue" customClass="DownSegue" customModule="H2O2Go" customModuleProvider="target" id="gPb-pS-WYp"/>
+                                    <segue destination="QQJ-Tk-5vf" kind="unwind" identifier="idLogRefillSegue" unwindAction="logRefill:" id="sBL-nE-rwb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-76-aWM">
@@ -374,6 +347,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QQJ-Tk-5vf" kind="unwind" unwindAction="cancelRefill:" id="jic-Tw-yeS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -400,6 +376,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ib-xV-kew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QQJ-Tk-5vf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="609" y="1262"/>
         </scene>
@@ -408,15 +385,15 @@
             <objects>
                 <viewController id="XPC-Gr-zRz" customClass="MapViewController" customModule="H2O2Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kM-5F-cqG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXp-nt-Iol">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT4-DT-v1w">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="mnR-ho-Kj9"/>
                                 </constraints>
@@ -427,16 +404,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Map" id="ygg-Zo-imj">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="LCM-96-jo8">
-                                            <connections>
-                                                <segue destination="oFK-HU-7Eo" kind="show" customClass="LeftToRightSegue" customModule="H2O2Go" customModuleProvider="target" id="BLl-9a-prC"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="LCM-96-jo8"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TA9-KT-RqN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -555,7 +528,4 @@
             <point key="canvasLocation" x="1442.0289855072465" y="1965.4017857142856"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="gPb-pS-WYp"/>
-    </inferredMetricsTieBreakers>
 </document>

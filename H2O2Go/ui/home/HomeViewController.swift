@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func logRefill(_ unwindSegue: UIStoryboardSegue) {
+        updateStats()
     }
     
     @IBAction func cancelRefill(_ unwindSegue: UIStoryboardSegue) {
