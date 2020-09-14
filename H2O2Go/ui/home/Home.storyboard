@@ -287,6 +287,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="dox-yl-KRa">
                             <color key="tintColor" red="0.3349270225" green="0.73115271329999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="XPC-Gr-zRz" kind="show" id="PdO-7f-f63"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -389,41 +392,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXp-nt-Iol">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT4-DT-v1w">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="mnR-ho-Kj9"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" red="0.4335377514" green="0.72777217630000002" blue="0.97729116680000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Map" id="ygg-Zo-imj">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="LCM-96-jo8"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TA9-KT-RqN">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TA9-KT-RqN" firstAttribute="top" secondItem="jT4-DT-v1w" secondAttribute="bottom" id="0P1-ud-ejI"/>
-                            <constraint firstItem="jT4-DT-v1w" firstAttribute="leading" secondItem="fmZ-Pd-fwJ" secondAttribute="leading" id="0eP-mO-sVo"/>
                             <constraint firstAttribute="bottom" secondItem="TA9-KT-RqN" secondAttribute="bottom" id="6aJ-Pg-Ogf"/>
                             <constraint firstItem="fmZ-Pd-fwJ" firstAttribute="trailing" secondItem="TA9-KT-RqN" secondAttribute="trailing" id="Rra-yg-inD"/>
                             <constraint firstItem="PXp-nt-Iol" firstAttribute="top" secondItem="6kM-5F-cqG" secondAttribute="top" id="TpV-w5-YV6"/>
-                            <constraint firstItem="jT4-DT-v1w" firstAttribute="top" secondItem="PXp-nt-Iol" secondAttribute="bottom" id="WEL-5R-pGt"/>
                             <constraint firstItem="PXp-nt-Iol" firstAttribute="leading" secondItem="fmZ-Pd-fwJ" secondAttribute="leading" id="duS-xi-W7F"/>
                             <constraint firstItem="PXp-nt-Iol" firstAttribute="trailing" secondItem="fmZ-Pd-fwJ" secondAttribute="trailing" id="jrC-NA-r5x"/>
-                            <constraint firstItem="jT4-DT-v1w" firstAttribute="trailing" secondItem="fmZ-Pd-fwJ" secondAttribute="trailing" id="l6E-lA-V8X"/>
                             <constraint firstItem="PXp-nt-Iol" firstAttribute="bottom" secondItem="fmZ-Pd-fwJ" secondAttribute="top" id="qRL-ty-VpJ"/>
+                            <constraint firstItem="TA9-KT-RqN" firstAttribute="top" secondItem="fmZ-Pd-fwJ" secondAttribute="top" id="t2j-hW-Sbt"/>
                             <constraint firstItem="TA9-KT-RqN" firstAttribute="leading" secondItem="fmZ-Pd-fwJ" secondAttribute="leading" id="tsj-af-Ry4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fmZ-Pd-fwJ"/>
